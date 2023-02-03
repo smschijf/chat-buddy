@@ -1,6 +1,7 @@
 <template>
   <div class="login-page">
     <div class="card">
+      <h1>Vue Chat</h1>
       <form @submit.prevent="login">
         <div class="title">Login</div>
         <input placeholder="Username" type="text" v-model="username" />

@@ -3,18 +3,23 @@
 }
 body {
   margin: 0px;
+  overflow-x: hidden;
+}
+h1 {
+  color: white;
+  margin: 0;
 }
 .login-page {
   width: 100vw;
   height: 100vh;
-  background: white;
+  background-color: rgb(40, 43, 54);
 }
 .card {
   width: 200px;
   position: relative;
   left: calc(50vw - 100px);
   text-align: center;
-  padding-top: 6vw;
+  padding-top: 3vw;
 }
 .title {
   padding-top: 32px;
