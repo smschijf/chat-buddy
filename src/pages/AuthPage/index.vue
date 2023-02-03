@@ -34,7 +34,7 @@
 </template>
 
 <script>
-// import { loginRest, signupRest } from "./api";
+import { loginRest, signupRest } from "./apis";
 
 export default {
   data() {
@@ -48,24 +48,24 @@ export default {
   },
   methods: {
     login() {
-      // loginRest(this.username, this.password)
-      //   .then((response) =>
-      //     this.$emit("onAuth", { ...response.data, secret: this.password })
-      //   )
-      //   .catch((error) => console.log("Login error", error));
+      loginRest(this.username, this.password)
+        .then((response) =>
+          this.$emit("onAuth", { ...response.data, secret: this.password })
+        )
+        .catch((error) => console.log("Login error", error));
     },
     signup() {
-      // signupRest(
-      //   this.username,
-      //   this.password,
-      //   this.email,
-      //   this.first_name,
-      //   this.last_name
-      // )
-      //   .then((response) =>
-      //     this.$emit("onAuth", { ...response.data, secret: this.password })
-      //   )
-      //   .catch((error) => console.log("Sign up error", error));
+      signupRest(
+        this.username,
+        this.password,
+        this.email,
+        this.first_name,
+        this.last_name
+      )
+        .then((response) =>
+          this.$emit("onAuth", { ...response.data, secret: this.password })
+        )
+        .catch((error) => console.log("Sign up error", error));
     },
   },
 };
